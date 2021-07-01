@@ -31,7 +31,10 @@ class ChartComponent extends Component {
     ) {
       this.chartGraphic.destroy();
     }
+    this.chartGraphic();
+  };
 
+  chartGraphic = () => {
     const chart = new Chart(document.getElementById("myChart"), {
       type: "line",
       data: {
@@ -47,10 +50,7 @@ class ChartComponent extends Component {
         ],
       },
     });
-    this.chartGraphic();
   };
-
-  chartGraphic = () => {};
 
   getNewDates = async (event) => {
     try {
